@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chugga Chugga Choo Choo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" id="image">
+            <h1>Chugga Chugga Choo Choo!</h1>
+        </div>
+        <div class="card">
+            <div class="card-header">Train Schedule</div>
+            <div class="card-body">
+                <table class="table" id="train-table">
+                    <thead>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </thead>
+                    <tbody id="table-data"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <div class="card-header">Add Train</div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">Train Name</label>
+                        <input type="text" class="form-control" id="inputName">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDest">Destination</label>
+                        <input type="text" class="form-control" id="inputDest">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTime">First Train Time (HH:mm - military time)</label>
+                        <input type="time" class="form-control" id="inputTime">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFreq">Frequency (min)</label>
+                        <input type="number" class="form-control" id="inputFreq">
+                    </div>
+                    <button type="button" class="btn btn-primary add" data-toggle="modal"
+                        data-target="#success">Add</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal fade" id="success" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Success!</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>A new train has been added to the schedule.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mclose" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
