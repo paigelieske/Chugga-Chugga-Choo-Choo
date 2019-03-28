@@ -2,18 +2,11 @@ body {
   background-color: palegoldenrod;
 }
 
-/* .jumbotron {
-    position: relative;
-} */
-
 #image {
     background: url("../images/collage.jpg") no-repeat;
     background-size: cover;
     background-position: bottom center;
     text-align: center;
-    /* filter: blur(8px);
-    -webkit-filter: blur(8px);
-    z-index: -1; */
 }
 
 h1 {
@@ -22,6 +15,7 @@ h1 {
 }
 
 .card-header {
+    font-weight: bold;
     color: royalblue;
 }
 
